@@ -7,12 +7,9 @@
 
 
 if
-[ ! -d "/ramdisk" ];                                # check if /ramdisk directory exists
-then
-mkdir '/ramdisk' ;                                  # create /ramdisk if not present
-fi
-
-if [ -d "/ramdisk" ];
-then
-    mount -t tmpfs -o size=5000M tmpfs '/ramdisk'   # mount a 5GB ramdisk volume on /ramdisk'
+    [ ! -d "/ramdisk" ];                                # check if /ramdisk directory doesn't exist
+then                                                    # then
+    mkdir '/ramdisk' ;                                  # create /ramdisk if not present
+else                                                    # else
+    mount -t tmpfs -o size=5000M tmpfs '/ramdisk'       # directly mount a 5GB ramdisk volume on /ramdisk'
 fi
