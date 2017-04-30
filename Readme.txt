@@ -1,1 +1,1 @@
-# Simple Script Shell for ramdisk mounting on OsX
+# Simple Script Shells for ramdisk mounting on OsX and Linux
